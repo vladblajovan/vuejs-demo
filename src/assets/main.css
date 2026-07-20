@@ -17,6 +17,10 @@
   --radius-xs: 0.4rem;
   --radius-sm: 0.6rem;
   --radius-md: 0.8rem;
+  --control-height-badge: 1.5rem;
+  --control-height-filter-compact: 1.5625rem;
+  --control-height-filter: 1.875rem;
+  --control-label-gap: 0.25rem;
   --shadow-md: 0 12px 36px rgba(13, 31, 55, 0.06);
   --shadow-lg: 0 24px 65px rgba(13, 31, 55, 0.08);
 }
@@ -106,16 +110,6 @@ svg {
   gap: clamp(3rem, 6vw, 7rem);
   min-height: 39rem;
   padding-block: 3.2rem 5.4rem;
-}
-
-.hero::after {
-  position: absolute;
-  bottom: -1.7rem;
-  left: 50%;
-  width: 1px;
-  height: 3.4rem;
-  background: var(--border-strong);
-  content: '';
 }
 
 .hero__copy {
@@ -490,11 +484,15 @@ svg {
   margin-bottom: 0.7rem;
 }
 .mini-filters span {
-  padding: 0.35rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--control-height-filter-compact);
+  padding: 0 0.5rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-xs);
   color: var(--muted);
-  font-size: 0.58rem;
+  font: 600 0.58rem/1 var(--font-sans);
 }
 .mini-filters .active {
   border-color: var(--vue);
@@ -554,11 +552,15 @@ svg {
   text-decoration: line-through;
 }
 .projection--tasks small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-height-badge);
   border-radius: 999px;
-  padding: 0.2rem 0.45rem;
+  padding: 0 0.45rem;
   color: var(--cobalt);
   background: #eff7ff;
-  font-size: 0.56rem;
+  font: 600 0.56rem/1 var(--font-sans);
 }
 .projection--tasks .completed small {
   color: var(--vue-dark);
@@ -1342,6 +1344,15 @@ svg {
   .hero__copy {
     max-width: 48rem;
   }
+  .hero__actions .text-link {
+    min-height: 3.35rem;
+    justify-content: center;
+    padding-inline: 1.45rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--ink);
+    background: #fff;
+  }
   .reactivity-intro,
   .confidence-layout,
   .implementation-intro,
@@ -1534,7 +1545,8 @@ svg {
 }
 
 @media (max-width: 460px) {
-  .hero__actions .button {
+  .hero__actions .button,
+  .hero__actions .text-link {
     width: 100%;
   }
   .insight-rail {

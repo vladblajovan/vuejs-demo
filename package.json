@@ -11,6 +11,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "design:migrate": "node penpot-selfhost/migrate-penpot-workflow.mjs",
+    "design:refine-approved": "node penpot-selfhost/apply-approved-design-refinements.mjs",
+    "design:seed-responsive": "node penpot-selfhost/seed-responsive-design.mjs && node penpot-selfhost/apply-approved-design-refinements.mjs",
     "design:sync": "node penpot-selfhost/sync-vue-design.mjs && node penpot-selfhost/extract-vue-components.mjs",
     "design:contract": "node penpot-selfhost/export-penpot-design-contract.mjs",
     "lint": "run-s \"lint:*\"",

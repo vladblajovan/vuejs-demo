@@ -71,7 +71,7 @@ async function buildVueDesign() {
     y: 0,
   }
 
-  for (const child of [...root.children]) {
+  for (const child of Array.from(root.children)) {
     if (child.name.startsWith('Code snapshot /')) child.remove()
   }
 
@@ -223,15 +223,15 @@ async function buildVueDesign() {
     text(
       `${name} / Label`,
       label,
-      x + 10,
-      y + 7,
-      width - 20,
-      height - 12,
+      x,
+      y,
+      width,
+      height,
       options.size ?? 11,
       options.weight ?? 700,
       options.color ?? C.inkSoft,
       item,
-      { align: 'center', lineHeight: 1 },
+      { align: 'center', verticalAlign: 'center', lineHeight: 1 },
     )
     return item
   }
@@ -445,8 +445,6 @@ async function buildVueDesign() {
     lineHeight: 1,
   })
   sourceArrowDown('Hero / Secondary arrow', 558, 576, 18, hero)
-  line('Hero / Continuation rule', 864, 675, 1, 65, C.borderStrong, hero)
-
   const task = panel('Component / Task board', 843, 220, 681, 324, hero)
   dropShadow(task, 24, 65, 0.08)
   text('Task board / Title', 'My tasks', 869, 247, 170, 26, 17, 800, C.ink, task, {
@@ -461,13 +459,13 @@ async function buildVueDesign() {
     align: 'center',
     lineHeight: 1,
   })
-  pill('Filter / All / Active', 'All  (2)', 869, 345, 63, task, {
+  pill('Filter / All / Active', 'All (2)', 869, 345, 63, task, {
     stroke: C.vue,
     color: C.vueDark,
     height: 30,
   })
-  pill('Filter / Open', 'Open  (1)', 940, 345, 75, task, { height: 30 })
-  pill('Filter / Done', 'Done  (1)', 1023, 345, 74, task, { height: 30 })
+  pill('Filter / Open', 'Open (1)', 940, 345, 75, task, { height: 30 })
+  pill('Filter / Done', 'Done (1)', 1023, 345, 74, task, { height: 30 })
   const taskList = board('Task list', 869, 386, 628, 105, C.white, task, C.border, 7)
   line('Task list / Row divider', 869, 438, 628, 1, C.border, taskList)
   rect('Task / Open / Checkbox', 884, 403, 20, 20, C.white, taskList, '#AAB6C8', 4)
@@ -1249,7 +1247,7 @@ async function add(title: string) {
     align: 'center',
     lineHeight: 1,
   })
-  pill('Component specimen / Filter active', 'All  (2)', 2420, 1217, 86, system, {
+  pill('Component specimen / Filter active', 'All (2)', 2420, 1217, 86, system, {
     stroke: C.vue,
     color: C.vueDark,
     height: 34,
@@ -1414,6 +1412,10 @@ async function add(title: string) {
       ['spacing', 'space.13', '104'],
       ['spacing', 'space.16', '128'],
       ['spacing', 'space.18', '144'],
+      ['spacing', 'control.height.badge', '24'],
+      ['spacing', 'control.height.filterCompact', '25'],
+      ['spacing', 'control.height.filter', '30'],
+      ['spacing', 'control.gap.label', '4'],
       ['borderRadius', 'radius.xs', '4'],
       ['borderRadius', 'radius.sm', '6.4'],
       ['borderRadius', 'radius.md', '9.6'],

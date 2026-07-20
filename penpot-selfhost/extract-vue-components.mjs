@@ -124,7 +124,7 @@ async function extractVueComponents() {
     }
   }
 
-  for (const child of [...masters.children]) {
+  for (const child of Array.from(masters.children)) {
     if (child.name.startsWith('Catalog label /')) child.remove()
   }
 

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T16:48:27.554Z",
+  "generatedAt": "2026-07-20T17:50:38.820Z",
   "source": {
     "tool": "Penpot MCP",
     "page": {
       "id": "d52047d3-b322-80d3-8008-5b2e07bf4ac1",
       "name": "Vue in Motion"
     },
-    "gitCommit": "8624130f648891323344276aaf7c9835d5282c4f"
+    "gitCommit": "2ffcee70cabdbecb7d252f198d51945d6d80fbd4"
   },
   "ownership": {
     "explorations": "designer-editable",
@@ -18,7 +18,7 @@
     {
       "id": "b2383c73-eb1d-8074-8008-5b3568bba939",
       "name": "Approved / Component library / Vue in Motion",
-      "x": 1848,
+      "x": 5448,
       "y": 3240,
       "width": 1500,
       "height": 2900
@@ -26,31 +26,63 @@
     {
       "id": "b2383c73-eb1d-8074-8008-5b509e75d102",
       "name": "Approved / Design system / Vue in Motion",
-      "x": 1848,
+      "x": 5448,
       "y": 1200,
       "width": 1400,
       "height": 1900
     },
     {
+      "id": "9968360e-e52d-803e-8008-5b6bb51f626c",
+      "name": "Approved / Responsive / Website / Mobile 390",
+      "x": 8344,
+      "y": 0,
+      "width": 390,
+      "height": 7240.000000000001
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bb1c3264f",
+      "name": "Approved / Responsive / Website / Tablet 1024",
+      "x": 7200,
+      "y": 0,
+      "width": 1024,
+      "height": 5720
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bba3e89a8",
+      "name": "Approved / Responsive component states / Vue in Motion",
+      "x": 8854,
+      "y": 1980,
+      "width": 1600,
+      "height": 1660
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bb882c805",
+      "name": "Approved / Responsive design system / Vue in Motion",
+      "x": 8854,
+      "y": 0,
+      "width": 1600,
+      "height": 1839.9999999999998
+    },
+    {
       "id": "b2383c73-eb1d-8074-8008-5b50973cdc72",
       "name": "Approved / Website / Vue in Motion / Desktop 1728",
-      "x": 0,
+      "x": 3600,
       "y": 1200,
       "width": 1728,
       "height": 7224
     },
     {
-      "id": "ba71cec5-b4a6-80ef-8008-5b5f76c665b6",
+      "id": "9968360e-e52d-803e-8008-5b66b79fb298",
       "name": "Code snapshot / Design system / Vue in Motion",
-      "x": 5448,
+      "x": 1848,
       "y": 0,
       "width": 1400,
       "height": 1900
     },
     {
-      "id": "ba71cec5-b4a6-80ef-8008-5b5f6c4f1f38",
+      "id": "9968360e-e52d-803e-8008-5b66ad88ce4d",
       "name": "Code snapshot / Website / Vue in Motion / Desktop 1728",
-      "x": 3600,
+      "x": 0,
       "y": 0,
       "width": 1728,
       "height": 7223.999999999999
@@ -58,9 +90,9 @@
     {
       "id": "b2383c73-eb1d-8074-8008-5b5b4ded6e49",
       "name": "Explorations / Vue in Motion",
-      "x": 0,
+      "x": 3600,
       "y": 0,
-      "width": 3247.9999999999995,
+      "width": 3248,
       "height": 919.9999999999999
     }
   ],
@@ -155,6 +187,26 @@
           "value": "#F3FBF7"
         },
         {
+          "name": "control.gap.label",
+          "type": "spacing",
+          "value": "4"
+        },
+        {
+          "name": "control.height.badge",
+          "type": "spacing",
+          "value": "24"
+        },
+        {
+          "name": "control.height.filter",
+          "type": "spacing",
+          "value": "30"
+        },
+        {
+          "name": "control.height.filterCompact",
+          "type": "spacing",
+          "value": "25"
+        },
+        {
           "name": "font.family.mono",
           "type": "fontFamilies",
           "value": [
@@ -247,6 +299,51 @@
           "name": "font.weight.semibold",
           "type": "fontWeights",
           "value": "600"
+        },
+        {
+          "name": "layout.breakpoint.mobile",
+          "type": "spacing",
+          "value": "760"
+        },
+        {
+          "name": "layout.breakpoint.narrow",
+          "type": "spacing",
+          "value": "460"
+        },
+        {
+          "name": "layout.breakpoint.tablet",
+          "type": "spacing",
+          "value": "1100"
+        },
+        {
+          "name": "layout.breakpoint.taskBoard",
+          "type": "spacing",
+          "value": "560"
+        },
+        {
+          "name": "layout.container.mobileMax",
+          "type": "spacing",
+          "value": "672"
+        },
+        {
+          "name": "layout.container.tabletMax",
+          "type": "spacing",
+          "value": "832"
+        },
+        {
+          "name": "layout.gutter.desktop",
+          "type": "spacing",
+          "value": "40"
+        },
+        {
+          "name": "layout.gutter.mobile",
+          "type": "spacing",
+          "value": "16"
+        },
+        {
+          "name": "layout.gutter.tablet",
+          "type": "spacing",
+          "value": "24"
         },
         {
           "name": "radius.lg",
@@ -557,6 +654,18 @@
       }
     },
     {
+      "id": "9968360e-e52d-803e-8008-5b6bbbc44a80",
+      "name": "Full width",
+      "path": "Button / Primary",
+      "fullName": "Button / Primary / Full width",
+      "implementation": {
+        "vue": "src/App.vue",
+        "states": [
+          "narrow"
+        ]
+      }
+    },
+    {
       "id": "b2383c73-eb1d-8074-8008-5b3568d87bc2",
       "name": "Large",
       "path": "Button / Primary",
@@ -692,6 +801,114 @@
         "states": [
           "default",
           "complete"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbc831c3",
+      "name": "Inline",
+      "path": "Responsive / Filter row",
+      "fullName": "Responsive / Filter row / Inline",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "default"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbc966fc",
+      "name": "Scrollable",
+      "path": "Responsive / Filter row",
+      "fullName": "Responsive / Filter row / Scrollable",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "at-or-below-560"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbcc578a",
+      "name": "Horizontal",
+      "path": "Responsive / Journey",
+      "fullName": "Responsive / Journey / Horizontal",
+      "implementation": {
+        "vue": "src/components/DataJourney.vue",
+        "states": [
+          "above-1100"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbcd45c3",
+      "name": "Vertical",
+      "path": "Responsive / Journey",
+      "fullName": "Responsive / Journey / Vertical",
+      "implementation": {
+        "vue": "src/components/DataJourney.vue",
+        "states": [
+          "at-or-below-1100"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbcbdde4",
+      "name": "One column",
+      "path": "Responsive / Projection layout",
+      "fullName": "Responsive / Projection layout / One column",
+      "implementation": {
+        "vue": "src/components/SharedTaskViews.vue",
+        "states": [
+          "at-or-below-760"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbc9f882",
+      "name": "Three columns",
+      "path": "Responsive / Projection layout",
+      "fullName": "Responsive / Projection layout / Three columns",
+      "implementation": {
+        "vue": "src/components/SharedTaskViews.vue",
+        "states": [
+          "above-1100"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbcb2cea",
+      "name": "Two columns",
+      "path": "Responsive / Projection layout",
+      "fullName": "Responsive / Projection layout / Two columns",
+      "implementation": {
+        "vue": "src/components/SharedTaskViews.vue",
+        "states": [
+          "at-or-below-1100"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbc62b12",
+      "name": "Inline",
+      "path": "Responsive / Task form",
+      "fullName": "Responsive / Task form / Inline",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "above-560"
+        ]
+      }
+    },
+    {
+      "id": "9968360e-e52d-803e-8008-5b6bbbc72a29",
+      "name": "Stacked",
+      "path": "Responsive / Task form",
+      "fullName": "Responsive / Task form / Stacked",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "at-or-below-560"
         ]
       }
     },

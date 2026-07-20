@@ -9,6 +9,10 @@
       "vue": "src/App.vue",
       "states": ["default", "hover", "focus", "disabled"]
     },
+    "Button / Primary / Full width": {
+      "vue": "src/App.vue",
+      "states": ["narrow"]
+    },
     "Button / Secondary / Large": {
       "vue": "src/App.vue",
       "states": ["default", "hover", "focus", "disabled"]
@@ -64,6 +68,42 @@
     "Card / Content": {
       "vue": "src/components/ImplementationGuide.vue",
       "states": ["default", "mobile"]
+    },
+    "Responsive / Task form / Inline": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["above-560"]
+    },
+    "Responsive / Task form / Stacked": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["at-or-below-560"]
+    },
+    "Responsive / Filter row / Inline": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["default"]
+    },
+    "Responsive / Filter row / Scrollable": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["at-or-below-560"]
+    },
+    "Responsive / Projection layout / Three columns": {
+      "vue": "src/components/SharedTaskViews.vue",
+      "states": ["above-1100"]
+    },
+    "Responsive / Projection layout / Two columns": {
+      "vue": "src/components/SharedTaskViews.vue",
+      "states": ["at-or-below-1100"]
+    },
+    "Responsive / Projection layout / One column": {
+      "vue": "src/components/SharedTaskViews.vue",
+      "states": ["at-or-below-760"]
+    },
+    "Responsive / Journey / Horizontal": {
+      "vue": "src/components/DataJourney.vue",
+      "states": ["above-1100"]
+    },
+    "Responsive / Journey / Vertical": {
+      "vue": "src/components/DataJourney.vue",
+      "states": ["at-or-below-1100"]
     }
   }
 }

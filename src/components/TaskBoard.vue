@@ -56,7 +56,8 @@ function submit() {
           :data-test="`filter-${item}`"
           @click="emit('update:filter', item)"
         >
-          {{ item }} <span>({{ counts[item] }})</span>
+          <span class="filter-label">{{ item }}</span>
+          <span class="filter-count">({{ counts[item] }})</span>
         </button>
       </div>
 
@@ -136,14 +137,21 @@ function submit() {
 
 .filters {
   display: flex;
+  flex-wrap: nowrap;
   gap: 0.45rem;
   margin: 1rem 0 0.7rem;
 }
 
 .filters button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: var(--control-label-gap);
+  height: var(--control-height-filter);
   border: 1px solid var(--border);
   border-radius: var(--radius-xs);
-  padding: 0.5rem 0.72rem;
+  padding: 0 0.72rem;
   color: var(--ink-soft);
   background: #fff;
   font: 700 0.72rem/1 var(--font-sans);
@@ -151,8 +159,15 @@ function submit() {
   cursor: pointer;
 }
 
-.filters button span {
-  margin-left: 0.2rem;
+.filters button .filter-label,
+.filters button .filter-count {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  line-height: 1;
+}
+
+.filters button .filter-count {
   color: var(--muted);
 }
 
@@ -225,13 +240,16 @@ function submit() {
 }
 
 .task-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-height-badge);
   border: 1px solid #c9dff8;
   border-radius: 999px;
-  padding: 0.25rem 0.55rem;
+  padding: 0 0.55rem;
   color: var(--cobalt);
   background: #eff7ff;
-  font-size: 0.67rem;
-  font-weight: 750;
+  font: 750 0.67rem/1 var(--font-sans);
 }
 
 .completed .task-status {
@@ -273,6 +291,8 @@ function submit() {
   }
   .filters {
     overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
   }
   .task-title {
     font-size: 0.8rem;

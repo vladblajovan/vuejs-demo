@@ -54,7 +54,10 @@ const response = await request(
     params: {
       name: 'execute_code',
       arguments: {
-        code: `return {
+        code: `const responsiveMobile = [...penpot.root.children].find(
+  (shape) => shape.name === 'Approved / Responsive / Website / Mobile 390'
+);
+return {
   page: { id: penpot.currentPage.id, name: penpot.currentPage.name },
   boards: [...penpot.root.children].map((shape) => ({
     id: shape.id,
@@ -73,7 +76,23 @@ const response = await request(
       active: set.active,
       tokens: set.tokens.length
     }))
-  }
+  },
+  responsiveMobile: responsiveMobile
+    ? [...responsiveMobile.children]
+        .filter((shape) =>
+          shape.name.startsWith('Responsive / Metric /') ||
+          shape.name === 'Mobile / Composition background' ||
+          shape.name === 'One state. Many views. / Heading' ||
+          shape.name === 'Mobile / State backbone'
+        )
+        .map((shape) => ({
+          name: shape.name,
+          x: shape.x,
+          y: shape.y,
+          width: shape.width,
+          height: shape.height
+        }))
+    : []
 };`,
       },
     },

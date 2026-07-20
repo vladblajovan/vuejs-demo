@@ -73,6 +73,17 @@ Rebuild only the Code snapshot and refresh the component catalog:
 bun run design:sync
 ```
 
+Seed the designer-owned responsive contract once:
+
+```sh
+bun run design:seed-responsive
+```
+
+This creates approved Tablet 1024 and Mobile 390 website boards, a responsive
+behavior matrix, responsive component-state masters, and breakpoint/gutter
+tokens. Existing responsive boards are preserved on later runs so reviewed
+design decisions are never overwritten.
+
 Approved component masters live on
 `Approved / Component library / Vue in Motion`. Existing masters remain stable
 so design edits and library references are not overwritten.
