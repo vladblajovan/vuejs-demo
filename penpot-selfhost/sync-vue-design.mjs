@@ -62,8 +62,17 @@ async function buildVueDesign() {
 
   if (!root) throw new Error('The active Penpot page has no root')
 
+  const approvedWebsite = [...root.children].find(
+    (child) => child.name === 'Approved / Website / Vue in Motion / Desktop 1728',
+  )
+  const approvedColumnX = approvedWebsite?.x >= 1800 ? 3600 : 0
+  const snapshotOffset = {
+    x: approvedColumnX === 0 ? 3600 : 0,
+    y: 0,
+  }
+
   for (const child of [...root.children]) {
-    if (child.name !== 'Component library / Extracted') child.remove()
+    if (child.name.startsWith('Code snapshot /')) child.remove()
   }
 
   try {
@@ -85,8 +94,8 @@ async function buildVueDesign() {
   function board(name, x, y, width, height, fill, parent = root, stroke, radius = 0) {
     const shape = penpot.createBoard()
     shape.name = name
-    shape.x = x
-    shape.y = y
+    shape.x = x + snapshotOffset.x
+    shape.y = y + snapshotOffset.y
     shape.resize(width, height)
     shape.clipContent = false
     shape.fills = fill ? [{ fillColor: fill, fillOpacity: 1 }] : []
@@ -108,8 +117,8 @@ async function buildVueDesign() {
   function rect(name, x, y, width, height, fill, parent, stroke, radius = 0) {
     const shape = penpot.createRectangle()
     shape.name = name
-    shape.x = x
-    shape.y = y
+    shape.x = x + snapshotOffset.x
+    shape.y = y + snapshotOffset.y
     shape.resize(width, height)
     shape.fills = fill ? [{ fillColor: fill, fillOpacity: 1 }] : []
     shape.strokes = stroke
@@ -130,8 +139,8 @@ async function buildVueDesign() {
   function ellipse(name, x, y, width, height, fill, parent, stroke, strokeWidth = 1) {
     const shape = penpot.createEllipse()
     shape.name = name
-    shape.x = x
-    shape.y = y
+    shape.x = x + snapshotOffset.x
+    shape.y = y + snapshotOffset.y
     shape.resize(width, height)
     shape.fills = fill ? [{ fillColor: fill, fillOpacity: 1 }] : []
     shape.strokes = stroke
@@ -168,8 +177,8 @@ async function buildVueDesign() {
     const shape = penpot.createText(characters)
     if (!shape) throw new Error(`Could not create text: ${name}`)
     shape.name = name
-    shape.x = x
-    shape.y = y
+    shape.x = x + snapshotOffset.x
+    shape.y = y + snapshotOffset.y
     shape.resize(width, height)
     shape.growType = 'fixed'
     const font = options.family === 'mono' ? mono : sans
@@ -231,8 +240,8 @@ async function buildVueDesign() {
     const shape = penpot.createShapeFromSvg(markup)
     if (!shape) return null
     shape.name = name
-    shape.x = x
-    shape.y = y
+    shape.x = x + snapshotOffset.x
+    shape.y = y + snapshotOffset.y
     shape.resize(width, height)
     return add(parent, shape)
   }
@@ -360,7 +369,14 @@ async function buildVueDesign() {
     return item
   }
 
-  const canvas = board('Website / Vue in Motion / Desktop 1728', 0, 0, 1728, 7224, C.white)
+  const canvas = board(
+    'Code snapshot / Website / Vue in Motion / Desktop 1728',
+    0,
+    0,
+    1728,
+    7224,
+    C.white,
+  )
   canvas.clipContent = true
 
   const header = board('01 Header', 0, 0, 1728, 88, C.white, canvas)
@@ -1136,7 +1152,15 @@ async function add(title: string) {
     { align: 'center', lineHeight: 1 },
   )
 
-  const system = board('Design system / Vue in Motion', 1848, 0, 1400, 1900, C.surface, root)
+  const system = board(
+    'Code snapshot / Design system / Vue in Motion',
+    1848,
+    0,
+    1400,
+    1900,
+    C.surface,
+    root,
+  )
   text('Design system / Title', 'Vue in Motion — Design system', 1920, 72, 900, 60, 44, 800, C.ink, system, {
     lineHeight: 1,
     letterSpacing: -1.8,
@@ -1320,8 +1344,8 @@ async function add(title: string) {
         asset = local.createColor()
         asset.name = name
         asset.path = path
+        asset.color = color
       }
-      asset.color = color
     }
 
     const typeStyles = [
@@ -1341,19 +1365,19 @@ async function add(title: string) {
         style = local.createTypography()
         style.name = name
         style.path = path
+        const variant = font?.variants?.find(
+          (item) => item.fontWeight === weight && (item.fontStyle ?? 'normal') === 'normal',
+        )
+        if (font && variant) {
+          style.fontId = font.fontId
+          style.fontFamily = font.fontFamily
+          style.fontVariantId = variant.fontVariantId
+          style.fontWeight = variant.fontWeight
+          style.fontStyle = variant.fontStyle
+        }
+        style.fontSize = size
+        style.lineHeight = lineHeight
       }
-      const variant = font?.variants?.find(
-        (item) => item.fontWeight === weight && (item.fontStyle ?? 'normal') === 'normal',
-      )
-      if (font && variant) {
-        style.fontId = font.fontId
-        style.fontFamily = font.fontFamily
-        style.fontVariantId = variant.fontVariantId
-        style.fontWeight = variant.fontWeight
-        style.fontStyle = variant.fontStyle
-      }
-      style.fontSize = size
-      style.lineHeight = lineHeight
     }
 
     const catalog = local.tokens
@@ -1425,8 +1449,8 @@ async function add(title: string) {
     storage.vueDesignLibraryWarning = String(error)
   }
 
-  storage.vueWebsiteBoard = canvas
-  storage.vueDesignSystemBoard = system
+  storage.vueCodeSnapshotWebsiteBoard = canvas
+  storage.vueCodeSnapshotDesignSystemBoard = system
   penpot.selection = [canvas]
 
   return {
@@ -1436,12 +1460,14 @@ async function add(title: string) {
       width: canvas.width,
       height: canvas.height,
       sections: canvas.children.length,
+      ownership: 'generated',
     },
     designSystem: {
       id: system.id,
       name: system.name,
       width: system.width,
       height: system.height,
+      ownership: 'generated',
     },
     library: {
       colors: penpot.library.local.colors.length,

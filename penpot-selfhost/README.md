@@ -52,21 +52,41 @@ before authorizing design changes.
 
 ## Sync the Vue website design
 
-With the Vue in Motion Penpot file open and its MCP plugin connected, rebuild
-the editable desktop website and companion design-system boards:
+With the Vue in Motion Penpot file open and its MCP plugin connected, migrate
+the existing file to the protected workflow once:
 
 ```sh
-node sync-vue-design.mjs
+bun run design:migrate
 ```
 
-Extract the reusable Penpot components after syncing:
+The file then has three ownership areas:
 
-```bash
-node extract-vue-components.mjs
+- `Explorations / Vue in Motion` is a designer-owned workspace for alternatives
+  and UX review.
+- `Approved / ...` contains accepted screens, styles, tokens, and component
+  masters. Automation preserves these boards.
+- `Code snapshot / ...` is generated from Vue and may be deleted and rebuilt.
+
+Rebuild only the Code snapshot and refresh the component catalog:
+
+```sh
+bun run design:sync
 ```
 
-The component masters live on `Component library / Extracted`. The sync command
-preserves that board so its library references remain stable.
+Approved component masters live on
+`Approved / Component library / Vue in Motion`. Existing masters remain stable
+so design edits and library references are not overwritten.
+
+After UX review approves a change, export the current Penpot tokens, styles,
+boards, component IDs, and Vue mappings:
+
+```sh
+bun run design:contract
+```
+
+The versioned output is written to
+`design-system/penpot-design-contract.json`. Review that diff before changing
+Vue code.
 
 Export any Penpot board for visual review:
 
@@ -75,10 +95,15 @@ node export-penpot-shape.mjs <shape-id> <output.png>
 node export-penpot-shape.mjs "name:Component / Projection graph" <output.png>
 ```
 
-The sync replaces the active page canvas, creates the complete 1728px desktop
-story, adds the design-system specimen board, and updates the local colors,
-typography styles, and core design tokens. It reads the authenticated Penpot
-MCP URL from `~/.codex/config.toml`; no key is stored in this repository.
+The sync replaces only generated Code snapshot boards, creates the complete
+1728px desktop story, and creates any missing local colors, typography styles,
+or core design tokens. It never overwrites existing approved library values.
+It reads the authenticated Penpot MCP URL from `~/.codex/config.toml`; no key
+is stored in this repository.
+
+The same scripts can target Penpot Cloud by registering the remote MCP URL from
+`design.penpot.app` in Codex. Self-hosting is useful for data control, backups,
+and version pinning, but is not required for the design-contract workflow.
 
 ## Operate the stack
 

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "components": {
+    "Brand / Vue mark": {
+      "vue": "src/components/BrandMark.vue",
+      "states": ["default", "compact"]
+    },
+    "Button / Primary / Large": {
+      "vue": "src/App.vue",
+      "states": ["default", "hover", "focus", "disabled"]
+    },
+    "Button / Secondary / Large": {
+      "vue": "src/App.vue",
+      "states": ["default", "hover", "focus", "disabled"]
+    },
+    "Form / Text input": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["default", "focus", "disabled", "error"]
+    },
+    "Filter / Active": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["active", "inactive", "focus"]
+    },
+    "Badge / Status / Open": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["open"]
+    },
+    "Badge / Status / Done": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["done"]
+    },
+    "Workspace / Task board": {
+      "vue": "src/components/TaskBoard.vue",
+      "states": ["default", "loading", "error", "empty", "mobile"]
+    },
+    "Code / Panel": {
+      "vue": "src/components/ReactiveInsights.vue",
+      "states": ["default", "mobile"]
+    },
+    "Insight / Metric": {
+      "vue": "src/components/ReactiveInsights.vue",
+      "states": ["default", "mobile"]
+    },
+    "Composition / Projection graph": {
+      "vue": "src/components/SharedTaskViews.vue",
+      "states": ["default", "mobile"]
+    },
+    "Projection / Progress": {
+      "vue": "src/components/SharedTaskViews.vue",
+      "states": ["default", "complete"]
+    },
+    "Journey / Step": {
+      "vue": "src/components/DataJourney.vue",
+      "states": ["idle", "active", "success", "error"]
+    },
+    "Testing / Code panel": {
+      "vue": "src/components/ConfidenceSection.vue",
+      "states": ["default", "mobile"]
+    },
+    "Architecture / Node": {
+      "vue": "src/components/ImplementationGuide.vue",
+      "states": ["default", "emphasized"]
+    },
+    "Card / Content": {
+      "vue": "src/components/ImplementationGuide.vue",
+      "states": ["default", "mobile"]
+    }
+  }
+}

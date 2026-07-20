@@ -54,3 +54,22 @@ The mock API implements:
 When a backend is available, set `VITE_API_MODE=real` and point `VITE_API_URL` at its tasks endpoint. No Vue component changes are required.
 
 Unit tests inject `FakeTaskRepository` for fast component tests. REST adapter integration tests use the same MSW handlers as development so request methods, payloads, responses, and failures are exercised. See [docs/architecture.md](docs/architecture.md) for the full decision.
+
+## Penpot design workflow
+
+The Penpot file separates design work into three ownership areas:
+
+- **Explorations** for alternatives and UX review.
+- **Approved** for accepted screens, tokens, and component masters.
+- **Code snapshot** for generated boards representing the current Vue implementation.
+
+Automation only replaces Code snapshot boards. After approving a design change, export the
+versioned design contract before implementation:
+
+```sh
+bun run design:contract
+bun run design:sync
+```
+
+See [design-system/README.md](design-system/README.md) and
+[penpot-selfhost/README.md](penpot-selfhost/README.md) for the complete workflow.

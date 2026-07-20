@@ -1,0 +1,728 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-20T16:39:43.393Z",
+  "source": {
+    "tool": "Penpot MCP",
+    "page": {
+      "id": "d52047d3-b322-80d3-8008-5b2e07bf4ac1",
+      "name": "Vue in Motion"
+    },
+    "gitCommit": "5cd10a096438e33df37839618f4485d0bc7bc387"
+  },
+  "ownership": {
+    "explorations": "designer-editable",
+    "approved": "design-source-of-truth",
+    "codeSnapshot": "generated-from-vue"
+  },
+  "boards": [
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568bba939",
+      "name": "Approved / Component library / Vue in Motion",
+      "x": 1848,
+      "y": 3240,
+      "width": 1500,
+      "height": 4700
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b509e75d102",
+      "name": "Approved / Design system / Vue in Motion",
+      "x": 1848,
+      "y": 1200,
+      "width": 1400,
+      "height": 1900
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b50973cdc72",
+      "name": "Approved / Website / Vue in Motion / Desktop 1728",
+      "x": 0,
+      "y": 1200,
+      "width": 1728,
+      "height": 7224
+    },
+    {
+      "id": "ba71cec5-b4a6-80ef-8008-5b5d7b37876d",
+      "name": "Code snapshot / Design system / Vue in Motion",
+      "x": 5448,
+      "y": 0,
+      "width": 1400,
+      "height": 1900
+    },
+    {
+      "id": "ba71cec5-b4a6-80ef-8008-5b5d739c4d04",
+      "name": "Code snapshot / Website / Vue in Motion / Desktop 1728",
+      "x": 3600,
+      "y": 0,
+      "width": 1728,
+      "height": 7223.999999999999
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b5b4ded6e49",
+      "name": "Explorations / Vue in Motion",
+      "x": 0,
+      "y": 0,
+      "width": 3247.9999999999995,
+      "height": 919.9999999999999
+    }
+  ],
+  "tokenSets": [
+    {
+      "name": "core",
+      "active": true,
+      "tokens": [
+        {
+          "name": "border.width.default",
+          "type": "borderWidth",
+          "value": "1"
+        },
+        {
+          "name": "border.width.emphasis",
+          "type": "borderWidth",
+          "value": "1.5"
+        },
+        {
+          "name": "color.base.white",
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        {
+          "name": "color.border.default",
+          "type": "color",
+          "value": "#DCE4E8"
+        },
+        {
+          "name": "color.border.strong",
+          "type": "color",
+          "value": "#A8C9BD"
+        },
+        {
+          "name": "color.brand.vue",
+          "type": "color",
+          "value": "#42B883"
+        },
+        {
+          "name": "color.brand.vueDark",
+          "type": "color",
+          "value": "#0C9564"
+        },
+        {
+          "name": "color.content.ink",
+          "type": "color",
+          "value": "#0B1833"
+        },
+        {
+          "name": "color.content.inkSoft",
+          "type": "color",
+          "value": "#25324A"
+        },
+        {
+          "name": "color.content.muted",
+          "type": "color",
+          "value": "#66738A"
+        },
+        {
+          "name": "color.interactive.cobalt",
+          "type": "color",
+          "value": "#1769E0"
+        },
+        {
+          "name": "color.status.openBorder",
+          "type": "color",
+          "value": "#C9DFF8"
+        },
+        {
+          "name": "color.status.openSurface",
+          "type": "color",
+          "value": "#EFF7FF"
+        },
+        {
+          "name": "color.surface.default",
+          "type": "color",
+          "value": "#F5F8F9"
+        },
+        {
+          "name": "color.surface.mint",
+          "type": "color",
+          "value": "#EFFAF5"
+        },
+        {
+          "name": "color.surface.mintBand",
+          "type": "color",
+          "value": "#EFFAF5"
+        },
+        {
+          "name": "color.surface.mintSoft",
+          "type": "color",
+          "value": "#F3FBF7"
+        },
+        {
+          "name": "font.family.mono",
+          "type": "fontFamilies",
+          "value": [
+            "DM Mono"
+          ]
+        },
+        {
+          "name": "font.family.sans",
+          "type": "fontFamilies",
+          "value": [
+            "Manrope"
+          ]
+        },
+        {
+          "name": "font.size.body",
+          "type": "fontSizes",
+          "value": "16"
+        },
+        {
+          "name": "font.size.bodySmall",
+          "type": "fontSizes",
+          "value": "14"
+        },
+        {
+          "name": "font.size.caption",
+          "type": "fontSizes",
+          "value": "9"
+        },
+        {
+          "name": "font.size.chapter",
+          "type": "fontSizes",
+          "value": "48"
+        },
+        {
+          "name": "font.size.code",
+          "type": "fontSizes",
+          "value": "11"
+        },
+        {
+          "name": "font.size.control",
+          "type": "fontSizes",
+          "value": "13"
+        },
+        {
+          "name": "font.size.display",
+          "type": "fontSizes",
+          "value": "72"
+        },
+        {
+          "name": "font.size.label",
+          "type": "fontSizes",
+          "value": "12"
+        },
+        {
+          "name": "font.size.lead",
+          "type": "fontSizes",
+          "value": "18.56"
+        },
+        {
+          "name": "font.size.meta",
+          "type": "fontSizes",
+          "value": "10"
+        },
+        {
+          "name": "font.size.section",
+          "type": "fontSizes",
+          "value": "52.8"
+        },
+        {
+          "name": "font.weight.bold",
+          "type": "fontWeights",
+          "value": "700"
+        },
+        {
+          "name": "font.weight.extraBold",
+          "type": "fontWeights",
+          "value": "800"
+        },
+        {
+          "name": "font.weight.medium",
+          "type": "fontWeights",
+          "value": "500"
+        },
+        {
+          "name": "font.weight.regular",
+          "type": "fontWeights",
+          "value": "400"
+        },
+        {
+          "name": "font.weight.semibold",
+          "type": "fontWeights",
+          "value": "600"
+        },
+        {
+          "name": "radius.lg",
+          "type": "borderRadius",
+          "value": "12.8"
+        },
+        {
+          "name": "radius.md",
+          "type": "borderRadius",
+          "value": "13"
+        },
+        {
+          "name": "radius.pill",
+          "type": "borderRadius",
+          "value": "999"
+        },
+        {
+          "name": "radius.sm",
+          "type": "borderRadius",
+          "value": "10"
+        },
+        {
+          "name": "radius.xs",
+          "type": "borderRadius",
+          "value": "4"
+        },
+        {
+          "name": "space.0_5",
+          "type": "spacing",
+          "value": "4"
+        },
+        {
+          "name": "space.1",
+          "type": "spacing",
+          "value": "8"
+        },
+        {
+          "name": "space.1_5",
+          "type": "spacing",
+          "value": "12"
+        },
+        {
+          "name": "space.10",
+          "type": "spacing",
+          "value": "80"
+        },
+        {
+          "name": "space.12",
+          "type": "spacing",
+          "value": "96"
+        },
+        {
+          "name": "space.13",
+          "type": "spacing",
+          "value": "104"
+        },
+        {
+          "name": "space.16",
+          "type": "spacing",
+          "value": "128"
+        },
+        {
+          "name": "space.18",
+          "type": "spacing",
+          "value": "144"
+        },
+        {
+          "name": "space.2",
+          "type": "spacing",
+          "value": "16"
+        },
+        {
+          "name": "space.2_5",
+          "type": "spacing",
+          "value": "20"
+        },
+        {
+          "name": "space.3",
+          "type": "spacing",
+          "value": "24"
+        },
+        {
+          "name": "space.4",
+          "type": "spacing",
+          "value": "32"
+        },
+        {
+          "name": "space.5",
+          "type": "spacing",
+          "value": "40"
+        },
+        {
+          "name": "space.6",
+          "type": "spacing",
+          "value": "48"
+        },
+        {
+          "name": "space.8",
+          "type": "spacing",
+          "value": "64"
+        }
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114b16db2",
+      "name": "Vue 500",
+      "path": "Brand",
+      "value": "#42B883"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30deccea0c",
+      "name": "Vue 500",
+      "path": "Brand",
+      "value": "#42B883"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30ded6c78a",
+      "name": "Vue 700",
+      "path": "Brand",
+      "value": "#0C9564"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114b7524a",
+      "name": "Vue 700",
+      "path": "Brand",
+      "value": "#0C9564"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30dedbf110",
+      "name": "Ink",
+      "path": "Content",
+      "value": "#0B1833"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114bb5b74",
+      "name": "Ink",
+      "path": "Content",
+      "value": "#0B1833"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30dee0ef0a",
+      "name": "Ink soft",
+      "path": "Content",
+      "value": "#25324A"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114bf96ed",
+      "name": "Ink soft",
+      "path": "Content",
+      "value": "#25324A"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30dee5720d",
+      "name": "Muted",
+      "path": "Content",
+      "value": "#66738A"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114cde3db",
+      "name": "Muted",
+      "path": "Content",
+      "value": "#66738A"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114d09388",
+      "name": "Cobalt",
+      "path": "Interactive",
+      "value": "#1769E0"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30dee9d3fb",
+      "name": "Cobalt",
+      "path": "Interactive",
+      "value": "#1769E0"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30def521d1",
+      "name": "Border",
+      "path": "Surface",
+      "value": "#DCE4E8"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114d6234c",
+      "name": "Border",
+      "path": "Surface",
+      "value": "#DCE4E8"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114d3408b",
+      "name": "Mint band",
+      "path": "Surface",
+      "value": "#EFFAF5"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30deef3d5d",
+      "name": "Mint band",
+      "path": "Surface",
+      "value": "#EFFAF5"
+    }
+  ],
+  "typographies": [
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b30defa6a62",
+      "name": "Display",
+      "path": "",
+      "fontFamily": "Manrope",
+      "fontWeight": "800",
+      "fontSize": "72",
+      "lineHeight": "0.98"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114ee8179",
+      "name": "Default",
+      "path": "Body",
+      "fontFamily": "Manrope",
+      "fontWeight": "400",
+      "fontSize": "16",
+      "lineHeight": "1.7"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114faa64b",
+      "name": "Default",
+      "path": "Code",
+      "fontFamily": "DM Mono",
+      "fontWeight": "500",
+      "fontSize": "12",
+      "lineHeight": "1.65"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114e5ac3c",
+      "name": "Card",
+      "path": "Heading",
+      "fontFamily": "Manrope",
+      "fontWeight": "800",
+      "fontSize": "17",
+      "lineHeight": "1.25"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114de76b6",
+      "name": "Section",
+      "path": "Heading",
+      "fontFamily": "Manrope",
+      "fontWeight": "800",
+      "fontSize": "52.8",
+      "lineHeight": "1.04"
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3114f4a394",
+      "name": "Strong",
+      "path": "Label",
+      "fontFamily": "Manrope",
+      "fontWeight": "700",
+      "fontSize": "13",
+      "lineHeight": "1"
+    }
+  ],
+  "components": [
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b35691e8523",
+      "name": "Node",
+      "path": "Architecture",
+      "fullName": "Architecture / Node",
+      "implementation": {
+        "vue": "src/components/ImplementationGuide.vue",
+        "states": [
+          "default",
+          "emphasized"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568f1eb3c",
+      "name": "Done",
+      "path": "Badge / Status",
+      "fullName": "Badge / Status / Done",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "done"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568eba847",
+      "name": "Open",
+      "path": "Badge / Status",
+      "fullName": "Badge / Status / Open",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "open"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568d172a6",
+      "name": "Vue mark",
+      "path": "Brand",
+      "fullName": "Brand / Vue mark",
+      "implementation": {
+        "vue": "src/components/BrandMark.vue",
+        "states": [
+          "default",
+          "compact"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568d87bc2",
+      "name": "Large",
+      "path": "Button / Primary",
+      "fullName": "Button / Primary / Large",
+      "implementation": {
+        "vue": "src/App.vue",
+        "states": [
+          "default",
+          "hover",
+          "focus",
+          "disabled"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568dd0540",
+      "name": "Large",
+      "path": "Button / Secondary",
+      "fullName": "Button / Secondary / Large",
+      "implementation": {
+        "vue": "src/App.vue",
+        "states": [
+          "default",
+          "hover",
+          "focus",
+          "disabled"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b356923ebea",
+      "name": "Content",
+      "path": "Card",
+      "fullName": "Card / Content",
+      "implementation": {
+        "vue": "src/components/ImplementationGuide.vue",
+        "states": [
+          "default",
+          "mobile"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3569026d07",
+      "name": "Panel",
+      "path": "Code",
+      "fullName": "Code / Panel",
+      "implementation": {
+        "vue": "src/components/ReactiveInsights.vue",
+        "states": [
+          "default",
+          "mobile"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b4ebdf4954b",
+      "name": "Projection graph",
+      "path": "Composition",
+      "fullName": "Composition / Projection graph",
+      "implementation": {
+        "vue": "src/components/SharedTaskViews.vue",
+        "states": [
+          "default",
+          "mobile"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568e64c9e",
+      "name": "Active",
+      "path": "Filter",
+      "fullName": "Filter / Active",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "active",
+          "inactive",
+          "focus"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568e1a573",
+      "name": "Text input",
+      "path": "Form",
+      "fullName": "Form / Text input",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "default",
+          "focus",
+          "disabled",
+          "error"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b356907e3cb",
+      "name": "Metric",
+      "path": "Insight",
+      "fullName": "Insight / Metric",
+      "implementation": {
+        "vue": "src/components/ReactiveInsights.vue",
+        "states": [
+          "default",
+          "mobile"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3569141c52",
+      "name": "Step",
+      "path": "Journey",
+      "fullName": "Journey / Step",
+      "implementation": {
+        "vue": "src/components/DataJourney.vue",
+        "states": [
+          "idle",
+          "active",
+          "success",
+          "error"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b35690ea170",
+      "name": "Progress",
+      "path": "Projection",
+      "fullName": "Projection / Progress",
+      "implementation": {
+        "vue": "src/components/SharedTaskViews.vue",
+        "states": [
+          "default",
+          "complete"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b356919a303",
+      "name": "Code panel",
+      "path": "Testing",
+      "fullName": "Testing / Code panel",
+      "implementation": {
+        "vue": "src/components/ConfidenceSection.vue",
+        "states": [
+          "default",
+          "mobile"
+        ]
+      }
+    },
+    {
+      "id": "b2383c73-eb1d-8074-8008-5b3568fcbe09",
+      "name": "Task board",
+      "path": "Workspace",
+      "fullName": "Workspace / Task board",
+      "implementation": {
+        "vue": "src/components/TaskBoard.vue",
+        "states": [
+          "default",
+          "loading",
+          "error",
+          "empty",
+          "mobile"
+        ]
+      }
+    }
+  ]
+}

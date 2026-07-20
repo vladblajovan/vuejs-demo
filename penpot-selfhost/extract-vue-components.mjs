@@ -53,24 +53,27 @@ async function extractVueComponents() {
     return [...root.children].find((shape) => shape.name === name)
   }
 
-  const website = findRootChild('Website / Vue in Motion / Desktop 1728')
-  const system = findRootChild('Design system / Vue in Motion')
+  const website = findRootChild('Code snapshot / Website / Vue in Motion / Desktop 1728')
+  const system = findRootChild('Code snapshot / Design system / Vue in Motion')
   if (!website || !system) {
     throw new Error('Run sync-vue-design.mjs before extracting components')
   }
 
   const sources = [...walk(website), ...walk(system)]
-  let masters = findRootChild('Component library / Extracted')
+  let masters =
+    findRootChild('Approved / Component library / Vue in Motion') ??
+    findRootChild('Component library / Extracted')
   if (!masters) {
     masters = penpot.createBoard()
-    masters.name = 'Component library / Extracted'
+    masters.name = 'Approved / Component library / Vue in Motion'
     masters.x = 1848
-    masters.y = 2040
+    masters.y = 3240
     masters.clipContent = false
     masters.fills = [{ fillColor: '#F5F8F9', fillOpacity: 1 }]
     root.appendChild(masters)
   }
-  masters.resize(1500, 4200)
+  masters.name = 'Approved / Component library / Vue in Motion'
+  masters.resize(1500, 4700)
 
   const specs = [
     ['Brand / Vue mark', 'Brand / Vue mark'],
@@ -100,15 +103,63 @@ async function extractVueComponents() {
 
   function componentPosition(fullName) {
     if (fullName === fullWidthComponent) {
-      return { x: 1938, y: 5630 }
+      return { x: masters.x + 90, y: masters.y + 3650 }
     }
 
     const index = compactComponents.indexOf(fullName)
     if (index < 0) throw new Error(`Component layout was not found: ${fullName}`)
     return {
-      x: 1872 + (index % 2) * 760,
-      y: 2110 + Math.floor(index / 2) * 440,
+      x: masters.x + 24 + (index % 2) * 760,
+      y: masters.y + 130 + Math.floor(index / 2) * 440,
     }
+  }
+
+  for (const child of [...masters.children]) {
+    if (child.name.startsWith('Catalog label /')) child.remove()
+  }
+
+  function catalogLabel(name, characters, x, y, width, size = 12, weight = '700') {
+    const shape = penpot.createText(characters)
+    if (!shape) return null
+    shape.name = `Catalog label / ${name}`
+    shape.x = x
+    shape.y = y
+    shape.resize(width, 24)
+    shape.growType = 'fixed'
+    const font = penpot.fonts.findByName('Manrope')
+    const variant = font?.variants?.find(
+      (item) =>
+        item.fontWeight === String(weight) && (item.fontStyle ?? 'normal') === 'normal',
+    )
+    if (font) font.applyToText(shape, variant)
+    shape.fontSize = String(size)
+    shape.lineHeight = '1.2'
+    shape.fills = [{ fillColor: '#0B1833', fillOpacity: 1 }]
+    masters.appendChild(shape)
+    return shape
+  }
+
+  catalogLabel(
+    'Title',
+    'Approved component library',
+    masters.x + 24,
+    masters.y + 28,
+    700,
+    24,
+    '800',
+  )
+  catalogLabel(
+    'Guidance',
+    'Edit approved masters here. Code snapshots never overwrite this board.',
+    masters.x + 24,
+    masters.y + 67,
+    900,
+    12,
+    '500',
+  )
+  for (const [, fullName] of specs) {
+    const position = componentPosition(fullName)
+    catalogLabel(fullName, fullName, position.x, position.y - 30, 650)
   }
 
   function syncPlacement(component, fullName) {
@@ -238,6 +289,7 @@ async function extractVueComponents() {
       name: masters.name,
       width: masters.width,
       height: masters.height,
+      ownership: 'approved',
     },
     components: {
       total: local.components.length,
