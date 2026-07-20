@@ -73,7 +73,7 @@ async function extractVueComponents() {
     root.appendChild(masters)
   }
   masters.name = 'Approved / Component library / Vue in Motion'
-  masters.resize(1500, 4700)
+  masters.resize(1500, 2900)
 
   const specs = [
     ['Brand / Vue mark', 'Brand / Vue mark'],
@@ -96,21 +96,31 @@ async function extractVueComponents() {
 
   const created = []
   const skipped = []
-  const fullWidthComponent = 'Composition / Projection graph'
-  const compactComponents = specs
-    .map(([, fullName]) => fullName)
-    .filter((fullName) => fullName !== fullWidthComponent)
+  const placements = {
+    'Brand / Vue mark': [24, 180],
+    'Button / Primary / Large': [300, 180],
+    'Button / Secondary / Large': [300, 275],
+    'Form / Text input': [650, 180],
+    'Filter / Active': [650, 275],
+    'Badge / Status / Open': [900, 275],
+    'Badge / Status / Done': [1100, 275],
+    'Workspace / Task board': [24, 510],
+    'Code / Panel': [760, 510],
+    'Insight / Metric': [760, 850],
+    'Projection / Progress': [24, 1130],
+    'Journey / Step': [380, 1130],
+    'Architecture / Node': [650, 1130],
+    'Card / Content': [950, 1130],
+    'Testing / Code panel': [24, 1560],
+    'Composition / Projection graph': [90, 2080],
+  }
 
   function componentPosition(fullName) {
-    if (fullName === fullWidthComponent) {
-      return { x: masters.x + 90, y: masters.y + 3650 }
-    }
-
-    const index = compactComponents.indexOf(fullName)
-    if (index < 0) throw new Error(`Component layout was not found: ${fullName}`)
+    const position = placements[fullName]
+    if (!position) throw new Error(`Component layout was not found: ${fullName}`)
     return {
-      x: masters.x + 24 + (index % 2) * 760,
-      y: masters.y + 130 + Math.floor(index / 2) * 440,
+      x: masters.x + position[0],
+      y: masters.y + position[1],
     }
   }
 
@@ -157,6 +167,15 @@ async function extractVueComponents() {
     12,
     '500',
   )
+  ;[
+    ['Section / Foundations', 'Foundations & controls', 24, 112],
+    ['Section / Feature surfaces', 'Feature surfaces', 24, 442],
+    ['Section / System views', 'System views', 24, 1062],
+    ['Section / Testing', 'Testing', 24, 1492],
+    ['Section / Composition', 'Composition', 24, 2012],
+  ].forEach(([name, characters, x, y]) => {
+    catalogLabel(name, characters, masters.x + x, masters.y + y, 700, 16, '800')
+  })
   for (const [, fullName] of specs) {
     const position = componentPosition(fullName)
     catalogLabel(fullName, fullName, position.x, position.y - 30, 650)

@@ -89,7 +89,7 @@ async function migratePenpotWorkflow() {
   approvedComponents.name = 'Approved / Component library / Vue in Motion'
   approvedComponents.x = approvedColumnX + 1848
   approvedComponents.y = 3240
-  approvedComponents.resize(1500, 4700)
+  approvedComponents.resize(1500, 2900)
   approvedComponents.clipContent = false
 
   let explorations = findRootChild('Explorations / Vue in Motion')

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T16:39:43.393Z",
+  "generatedAt": "2026-07-20T16:48:27.554Z",
   "source": {
     "tool": "Penpot MCP",
     "page": {
       "id": "d52047d3-b322-80d3-8008-5b2e07bf4ac1",
       "name": "Vue in Motion"
     },
-    "gitCommit": "5cd10a096438e33df37839618f4485d0bc7bc387"
+    "gitCommit": "8624130f648891323344276aaf7c9835d5282c4f"
   },
   "ownership": {
     "explorations": "designer-editable",
@@ -21,7 +21,7 @@
       "x": 1848,
       "y": 3240,
       "width": 1500,
-      "height": 4700
+      "height": 2900
     },
     {
       "id": "b2383c73-eb1d-8074-8008-5b509e75d102",
@@ -40,7 +40,7 @@
       "height": 7224
     },
     {
-      "id": "ba71cec5-b4a6-80ef-8008-5b5d7b37876d",
+      "id": "ba71cec5-b4a6-80ef-8008-5b5f76c665b6",
       "name": "Code snapshot / Design system / Vue in Motion",
       "x": 5448,
       "y": 0,
@@ -48,7 +48,7 @@
       "height": 1900
     },
     {
-      "id": "ba71cec5-b4a6-80ef-8008-5b5d739c4d04",
+      "id": "ba71cec5-b4a6-80ef-8008-5b5f6c4f1f38",
       "name": "Code snapshot / Website / Vue in Motion / Desktop 1728",
       "x": 3600,
       "y": 0,
